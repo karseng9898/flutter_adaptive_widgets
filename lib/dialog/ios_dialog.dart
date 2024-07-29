@@ -4,11 +4,12 @@ import 'package:flutter/cupertino.dart';
 
 class IOSDialog implements AdaptiveDialog {
   @override
-  Widget build(
+  Future<T?> show<T>(
     BuildContext context, {
     required String title,
     String? content,
     required List<AdaptiveDialogButtonBuilder> actionButtons,
+    bool dismissible = false,
   }) {
     final actions = actionButtons
         .map(
@@ -21,6 +22,14 @@ class IOSDialog implements AdaptiveDialog {
           ),
         )
         .toList();
-    return CupertinoAlertDialog(title: Text(title), content: content != null ? Text(content) : null, actions: actions);
+
+    return showCupertinoDialog<T>(
+      context: context,
+      barrierDismissible: dismissible,
+      builder: (context) {
+        return CupertinoAlertDialog(
+            title: Text(title), content: content != null ? Text(content) : null, actions: actions);
+      },
+    );
   }
 }

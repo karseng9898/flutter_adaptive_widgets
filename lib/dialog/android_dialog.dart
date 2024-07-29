@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 
 class AndroidDialog implements AdaptiveDialog {
   @override
-  Widget build(
+  Future<T?> show<T>(
     BuildContext context, {
     required String title,
     String? content,
     required List<AdaptiveDialogButtonBuilder> actionButtons,
+    bool dismissible = false,
   }) {
     final actions = actionButtons
         .map(
@@ -21,6 +22,17 @@ class AndroidDialog implements AdaptiveDialog {
           ),
         )
         .toList();
-    return AlertDialog.adaptive(title: Text(title), content: content != null ? Text(content) : null, actions: actions);
+
+    return showDialog<T>(
+      context: context,
+      barrierDismissible: dismissible,
+      builder: (context) {
+        return AlertDialog.adaptive(
+          title: Text(title),
+          content: content != null ? Text(content) : null,
+          actions: actions,
+        );
+      },
+    );
   }
 }

@@ -6,17 +6,19 @@ import 'package:adaptive_widgets_flutter/refreshable_scroll_view/adaptive_refres
 import 'package:flutter/material.dart';
 
 class AdaptiveWidgets {
-  static Widget buildDialog(
-    BuildContext context,
+  static Future<T?> showDialog<T>(
+    BuildContext context, {
     String? title,
     String? content,
-    List<AdaptiveDialogButtonBuilder> actionButtons,
-  ) {
-    return AdaptiveDialog(Theme.of(context).platform).build(
+    required List<AdaptiveDialogButtonBuilder> actionButtons,
+    bool dismissible = true,
+  }) {
+    return AdaptiveDialog(Theme.of(context).platform).show<T>(
       context,
       title: title ?? '',
       content: content,
       actionButtons: actionButtons,
+      dismissible: dismissible,
     );
   }
 

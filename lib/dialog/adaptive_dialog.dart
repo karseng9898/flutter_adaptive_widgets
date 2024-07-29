@@ -28,10 +28,11 @@ abstract class AdaptiveDialog {
     }
   }
 
-  Widget build(
+  Future<T?> show<T>(
     BuildContext context, {
     required String title,
     String? content,
     required List<AdaptiveDialogButtonBuilder> actionButtons,
+    bool dismissible,
   });
 }
