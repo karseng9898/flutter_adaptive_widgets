@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:flutter_platform_widgets/dialog/button/adaptive_dialog_action.dart';
+import 'package:adaptive_widgets_flutter/dialog/button/adaptive_dialog_action.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 

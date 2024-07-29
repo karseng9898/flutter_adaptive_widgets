@@ -1,5 +1,5 @@
-import 'package:flutter_platform_widgets/dialog/android_dialog.dart';
-import 'package:flutter_platform_widgets/dialog/ios_dialog.dart';
+import 'package:adaptive_widgets_flutter/dialog/android_dialog.dart';
+import 'package:adaptive_widgets_flutter/dialog/ios_dialog.dart';
 import 'package:flutter/widgets.dart';
 
 class AdaptiveDialogButtonBuilder {
