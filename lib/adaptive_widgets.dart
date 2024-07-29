@@ -5,7 +5,6 @@ import 'package:adaptive_widgets/dialog/adaptive_dialog.dart';
 import 'package:adaptive_widgets/refreshable_scroll_view/adaptive_refreshable_scroll_view.dart';
 import 'package:flutter/material.dart';
 
-/// A Calculator.
 class AdaptiveWidgets {
   static Widget buildDialog(
     BuildContext context,
