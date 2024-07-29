@@ -1,4 +1,4 @@
-import 'package:flutter_adaptive_widgets/refreshable_scroll_view/adaptive_refreshable_scroll_view.dart';
+import 'package:platform_widgets/refreshable_scroll_view/adaptive_refreshable_scroll_view.dart';
 import 'package:flutter/cupertino.dart';
 
 class IOSRefreshableScrollView implements AdaptiveRefreshableScrollView {
