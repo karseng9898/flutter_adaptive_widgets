@@ -1,4 +1,4 @@
-name: platform_widgets
+name: flutter_platform_widgets
 description: "A Flutter package for supporting adaptive widgets for iOS and Android platform."
 version: 0.0.1
 homepage: https://github.com/karseng9898/flutter_adaptive_widgets.git

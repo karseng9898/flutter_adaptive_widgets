@@ -1,4 +1,4 @@
-import 'package:platform_widgets/refreshable_scroll_view/adaptive_refreshable_scroll_view.dart';
+import 'package:flutter_platform_widgets/refreshable_scroll_view/adaptive_refreshable_scroll_view.dart';
 import 'package:flutter/material.dart';
 
 class AndroidRefreshableScrollView implements AdaptiveRefreshableScrollView {

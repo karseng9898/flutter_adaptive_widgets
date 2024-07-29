@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:platform_widgets/dialog/button/adaptive_dialog_action.dart';
+import 'package:flutter_platform_widgets/dialog/button/adaptive_dialog_action.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
