@@ -1,3 +1,5 @@
 ## 0.0.1
+Initial Release
 
-* TODO: Describe initial release.
+## 0.0.4
+Added Adaptive Bottom Sheets

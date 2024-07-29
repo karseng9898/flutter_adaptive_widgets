@@ -1,5 +1,6 @@
 library adaptive_widgets;
 
+import 'package:adaptive_widgets_flutter/bottom_action_sheet/adaptive_bottom_action_sheet.dart';
 import 'package:adaptive_widgets_flutter/date_picker/adaptive_date_picker.dart';
 import 'package:adaptive_widgets_flutter/dialog/adaptive_dialog.dart';
 import 'package:adaptive_widgets_flutter/refreshable_scroll_view/adaptive_refreshable_scroll_view.dart';
@@ -17,6 +18,18 @@ class AdaptiveWidgets {
       context,
       title: title ?? '',
       content: content,
+      actionButtons: actionButtons,
+      dismissible: dismissible,
+    );
+  }
+
+  static Future<T?> showBottomActionSheet<T>(
+    BuildContext context, {
+    required List<AdaptiveBottomSheetButtonBuilder> actionButtons,
+    bool dismissible = true,
+  }) {
+    return AdaptiveBottomActionSheet(Theme.of(context).platform).show<T>(
+      context,
       actionButtons: actionButtons,
       dismissible: dismissible,
     );
