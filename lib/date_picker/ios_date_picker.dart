@@ -1,4 +1,4 @@
-import 'package:adaptive_widgets/date_picker/adaptive_date_picker.dart';
+import 'package:flutter_adaptive_widgets/date_picker/adaptive_date_picker.dart';
 import 'package:flutter/cupertino.dart';
 
 class IOSDatePicker implements AdaptiveDatePicker {

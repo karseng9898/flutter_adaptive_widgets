@@ -1,5 +1,5 @@
-import 'package:adaptive_widgets/refreshable_scroll_view/android_refreshable_scroll_view.dart';
-import 'package:adaptive_widgets/refreshable_scroll_view/ios_refreshable_scroll_view.dart';
+import 'package:flutter_adaptive_widgets/refreshable_scroll_view/android_refreshable_scroll_view.dart';
+import 'package:flutter_adaptive_widgets/refreshable_scroll_view/ios_refreshable_scroll_view.dart';
 import 'package:flutter/widgets.dart';
 
 abstract class AdaptiveRefreshableScrollView {

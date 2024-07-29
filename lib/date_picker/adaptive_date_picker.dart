@@ -1,5 +1,5 @@
-import 'package:adaptive_widgets/date_picker/android_date_picker.dart';
-import 'package:adaptive_widgets/date_picker/ios_date_picker.dart';
+import 'package:flutter_adaptive_widgets/date_picker/android_date_picker.dart';
+import 'package:flutter_adaptive_widgets/date_picker/ios_date_picker.dart';
 import 'package:flutter/widgets.dart';
 
 abstract class AdaptiveDatePicker {

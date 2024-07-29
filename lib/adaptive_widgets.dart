@@ -1,8 +1,8 @@
 library adaptive_widgets;
 
-import 'package:adaptive_widgets/date_picker/adaptive_date_picker.dart';
-import 'package:adaptive_widgets/dialog/adaptive_dialog.dart';
-import 'package:adaptive_widgets/refreshable_scroll_view/adaptive_refreshable_scroll_view.dart';
+import 'package:flutter_adaptive_widgets/date_picker/adaptive_date_picker.dart';
+import 'package:flutter_adaptive_widgets/dialog/adaptive_dialog.dart';
+import 'package:flutter_adaptive_widgets/refreshable_scroll_view/adaptive_refreshable_scroll_view.dart';
 import 'package:flutter/material.dart';
 
 class AdaptiveWidgets {
