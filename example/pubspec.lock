@@ -5,10 +5,10 @@ packages:
     dependency: "direct main"
     description:
       name: adaptive_widgets_flutter
-      sha256: "950036db9f07a589263295fbd0d8baa6ee188b2b7be79425e9f16c42273d4070"
+      sha256: "56b18410b9d6b487f4bf999c4c22935996674d4337ffa0521f275f0a902de55b"
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.2"
+    version: "0.0.4"
   async:
     dependency: transitive
     description:

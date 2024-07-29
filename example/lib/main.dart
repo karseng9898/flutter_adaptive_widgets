@@ -1,4 +1,5 @@
 import 'package:adaptive_widgets_flutter/adaptive_widgets.dart';
+import 'package:adaptive_widgets_flutter/bottom_action_sheet/adaptive_bottom_action_sheet.dart';
 import 'package:adaptive_widgets_flutter/dialog/adaptive_dialog.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -68,6 +69,32 @@ class Home extends StatelessWidget {
                   );
                 },
                 child: const Text('Show Dialog'),
+              ),
+            ),
+          ),
+          const SliverPadding(padding: EdgeInsets.only(top: 20)),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: CupertinoButton.filled(
+                onPressed: () async {
+                  final actionButtons = [
+                    AdaptiveBottomSheetButtonBuilder(
+                      text: 'Action 1',
+                      onPressed: (context) => Navigator.of(context).pop('action 1'),
+                    ),
+                    AdaptiveBottomSheetButtonBuilder(text: 'Action 2'),
+                    AdaptiveBottomSheetButtonBuilder(text: 'Cancel', isCancelAction: true),
+                    AdaptiveBottomSheetButtonBuilder(text: 'Action 3'),
+                  ];
+
+                  final result = await AdaptiveBottomActionSheet(Theme.of(context).platform).show(
+                    context,
+                    actionButtons: actionButtons,
+                  );
+                  debugPrint(result);
+                },
+                child: const Text('Show Bottom Action Sheet'),
               ),
             ),
           )
