@@ -12,7 +12,10 @@ class AndroidBottomActionSheetButton implements AdaptiveBottomActionSheetButton 
     required bool isCancelAction,
   }) {
     return TextButton(
-      style: TextButton.styleFrom(alignment: Alignment.centerLeft),
+      style: TextButton.styleFrom(
+        alignment: Alignment.centerLeft,
+        textStyle: TextStyle(fontSize: 18, fontWeight: isCancelAction ? FontWeight.w600 : FontWeight.w500),
+      ),
       onPressed: () {
         if (onPressed != null) {
           onPressed.call(context);
