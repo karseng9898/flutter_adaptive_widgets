@@ -1,4 +1,3 @@
-import 'package:adaptive_widgets_flutter/dialog/button/adaptive_dialog_action.dart';
 import 'package:adaptive_widgets_flutter/dialog/adaptive_dialog.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +10,7 @@ class AndroidDialog implements AdaptiveDialog {
     required List<AdaptiveDialogButtonBuilder> actionButtons,
     bool dismissible = false,
   }) {
-    final actions = actionButtons
+    List<Widget> getActions(BuildContext context) => actionButtons
         .map(
           (e) => AdaptiveDialogButton(TargetPlatform.android).build(
             context,
@@ -30,7 +29,7 @@ class AndroidDialog implements AdaptiveDialog {
         return AlertDialog.adaptive(
           title: Text(title),
           content: content != null ? Text(content) : null,
-          actions: actions,
+          actions: getActions(context),
         );
       },
     );

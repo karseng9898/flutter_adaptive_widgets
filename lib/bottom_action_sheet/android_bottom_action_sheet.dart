@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart';
-import 'adaptive_bottom_action_sheet.dart';
-import 'bottom_action_sheet_button/adaptive_bottom_action_sheet_button.dart';
 import 'package:flutter/material.dart';
+
+import 'adaptive_bottom_action_sheet.dart';
 
 class AndroidBottomActionSheet implements AdaptiveBottomActionSheet {
   @override

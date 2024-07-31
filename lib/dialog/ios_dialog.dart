@@ -1,4 +1,3 @@
-import 'package:adaptive_widgets_flutter/dialog/button/adaptive_dialog_action.dart';
 import 'package:adaptive_widgets_flutter/dialog/adaptive_dialog.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -11,7 +10,7 @@ class IOSDialog implements AdaptiveDialog {
     required List<AdaptiveDialogButtonBuilder> actionButtons,
     bool dismissible = false,
   }) {
-    final actions = actionButtons
+    List<Widget> getActions(BuildContext context) => actionButtons
         .map(
           (e) => AdaptiveDialogButton(TargetPlatform.iOS).build(
             context,
@@ -28,7 +27,10 @@ class IOSDialog implements AdaptiveDialog {
       barrierDismissible: dismissible,
       builder: (context) {
         return CupertinoAlertDialog(
-            title: Text(title), content: content != null ? Text(content) : null, actions: actions);
+          title: Text(title),
+          content: content != null ? Text(content) : null,
+          actions: getActions(context),
+        );
       },
     );
   }

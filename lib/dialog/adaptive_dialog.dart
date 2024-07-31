@@ -2,6 +2,8 @@ import 'package:adaptive_widgets_flutter/dialog/android_dialog.dart';
 import 'package:adaptive_widgets_flutter/dialog/ios_dialog.dart';
 import 'package:flutter/widgets.dart';
 
+export 'button/adaptive_dialog_action.dart';
+
 class AdaptiveDialogButtonBuilder {
   final String text;
   final void Function(BuildContext context)? onPressed;
