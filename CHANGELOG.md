@@ -15,3 +15,6 @@ Lower down the sdk constraints
 
 ## 0.0.10
 Fix a bug that unable to pop the dialog correctly
+
+## 0.0.11
+Fix a bug that refreshable scroll view header is not working issue

@@ -1,6 +1,4 @@
 import 'package:adaptive_widgets_flutter/adaptive_widgets.dart';
-import 'package:adaptive_widgets_flutter/bottom_action_sheet/adaptive_bottom_action_sheet.dart';
-import 'package:adaptive_widgets_flutter/dialog/adaptive_dialog.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -27,6 +25,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: CupertinoColors.systemBackground.resolveFrom(context),
       appBar: AppBar(
         title: const Text('Adaptive Widgets'),
       ),

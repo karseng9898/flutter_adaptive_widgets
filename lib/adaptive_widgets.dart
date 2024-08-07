@@ -59,6 +59,7 @@ class AdaptiveWidgets {
     return AdaptiveRefreshableScrollView(Theme.of(context).platform).build(
       context,
       key: key,
+      header: header,
       slivers: slivers,
       controller: controller,
       onRefresh: onRefresh,

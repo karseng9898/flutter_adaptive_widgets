@@ -4,10 +4,9 @@ packages:
   adaptive_widgets_flutter:
     dependency: "direct main"
     description:
-      name: adaptive_widgets_flutter
-      sha256: "3afae0eaa1614d3c7e8269280b303d5b1d032530306bc57696698795e7ace1c0"
-      url: "https://pub.dev"
-    source: hosted
+      path: ".."
+      relative: true
+    source: path
     version: "0.0.10"
   async:
     dependency: transitive
