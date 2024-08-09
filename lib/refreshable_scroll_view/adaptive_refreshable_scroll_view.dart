@@ -28,5 +28,6 @@ abstract class AdaptiveRefreshableScrollView {
     required bool shrinkWrap,
     Color? color,
     Color? refreshControlBackgroundColor,
+    EdgeInsets padding = EdgeInsets.zero,
   });
 }

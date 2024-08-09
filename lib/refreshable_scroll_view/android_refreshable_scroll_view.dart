@@ -17,6 +17,7 @@ class AndroidRefreshableScrollView implements AdaptiveRefreshableScrollView {
     required bool shrinkWrap,
     Color? color,
     Color? refreshControlBackgroundColor,
+    EdgeInsets padding = EdgeInsets.zero,
   }) {
     final scrollView = CustomScrollView(
       key: key,
@@ -28,7 +29,10 @@ class AndroidRefreshableScrollView implements AdaptiveRefreshableScrollView {
       shrinkWrap: shrinkWrap,
       slivers: [
         if (header != null) header,
-        ...slivers,
+        SliverPadding(
+          padding: padding,
+          sliver: SliverMainAxisGroup(slivers: slivers),
+        ),
       ],
     );
 

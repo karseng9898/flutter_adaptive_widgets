@@ -17,6 +17,7 @@ class IOSRefreshableScrollView implements AdaptiveRefreshableScrollView {
     required bool shrinkWrap,
     Color? color,
     Color? refreshControlBackgroundColor,
+    EdgeInsets padding = EdgeInsets.zero,
   }) {
     return CustomScrollView(
       key: key,
@@ -44,7 +45,10 @@ class IOSRefreshableScrollView implements AdaptiveRefreshableScrollView {
               );
             },
           ),
-        ...slivers,
+        SliverPadding(
+          padding: padding,
+          sliver: SliverMainAxisGroup(slivers: slivers),
+        )
       ],
     );
   }

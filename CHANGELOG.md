@@ -18,3 +18,6 @@ Fix a bug that unable to pop the dialog correctly
 
 ## 0.0.11
 Fix a bug that refreshable scroll view header is not working issue
+
+## 0.0.12
+- Added padding support for refreshable scroll view
