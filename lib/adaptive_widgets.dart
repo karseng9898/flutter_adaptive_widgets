@@ -55,6 +55,7 @@ class AdaptiveWidgets {
     bool shrinkWrap = false,
     Color? color,
     Color? refreshControlBackgroundColor,
+    EdgeInsets padding = EdgeInsets.zero,
   }) {
     return AdaptiveRefreshableScrollView(Theme.of(context).platform).build(
       context,
@@ -70,6 +71,7 @@ class AdaptiveWidgets {
       shrinkWrap: shrinkWrap,
       color: color,
       refreshControlBackgroundColor: refreshControlBackgroundColor,
+      padding: padding,
     );
   }
 

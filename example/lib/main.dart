@@ -31,70 +31,61 @@ class Home extends StatelessWidget {
       ),
       body: AdaptiveWidgets.buildRefreshableScrollView(
         context,
+        padding: const EdgeInsets.all(20),
         onRefresh: () async {
           await Future.delayed(const Duration(seconds: 2));
         },
         slivers: [
-          const SliverPadding(padding: EdgeInsets.only(top: 20)),
           SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: CupertinoButton.filled(
-                onPressed: () async {
-                  await AdaptiveWidgets.showDatePicker(context);
-                },
-                child: const Text('Show Date Picker'),
-              ),
+            child: CupertinoButton.filled(
+              onPressed: () async {
+                await AdaptiveWidgets.showDatePicker(context);
+              },
+              child: const Text('Show Date Picker'),
             ),
           ),
           const SliverPadding(padding: EdgeInsets.only(top: 20)),
           SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: CupertinoButton.filled(
-                onPressed: () async {
-                  await AdaptiveWidgets.showDialog(
-                    context,
-                    title: 'Sample Title',
-                    content: 'Sample Content',
-                    actionButtons: [
-                      AdaptiveDialogButtonBuilder(
-                        text: 'OK',
-                        onPressed: (context) {
-                          Navigator.of(context).pop();
-                        },
-                      ),
-                    ],
-                  );
-                },
-                child: const Text('Show Dialog'),
-              ),
-            ),
-          ),
-          const SliverPadding(padding: EdgeInsets.only(top: 20)),
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: CupertinoButton.filled(
-                onPressed: () async {
-                  final actionButtons = [
-                    AdaptiveBottomSheetButtonBuilder(
-                      text: 'Action 1',
-                      onPressed: (context) => Navigator.of(context).pop('action 1'),
+            child: CupertinoButton.filled(
+              onPressed: () async {
+                await AdaptiveWidgets.showDialog(
+                  context,
+                  title: 'Sample Title',
+                  content: 'Sample Content',
+                  actionButtons: [
+                    AdaptiveDialogButtonBuilder(
+                      text: 'OK',
+                      onPressed: (context) {
+                        Navigator.of(context).pop();
+                      },
                     ),
-                    AdaptiveBottomSheetButtonBuilder(text: 'Action 2'),
-                    AdaptiveBottomSheetButtonBuilder(text: 'Cancel', isCancelAction: true),
-                    AdaptiveBottomSheetButtonBuilder(text: 'Action 3'),
-                  ];
+                  ],
+                );
+              },
+              child: const Text('Show Dialog'),
+            ),
+          ),
+          const SliverPadding(padding: EdgeInsets.only(top: 20)),
+          SliverToBoxAdapter(
+            child: CupertinoButton.filled(
+              onPressed: () async {
+                final actionButtons = [
+                  AdaptiveBottomSheetButtonBuilder(
+                    text: 'Action 1',
+                    onPressed: (context) => Navigator.of(context).pop('action 1'),
+                  ),
+                  AdaptiveBottomSheetButtonBuilder(text: 'Action 2'),
+                  AdaptiveBottomSheetButtonBuilder(text: 'Cancel', isCancelAction: true),
+                  AdaptiveBottomSheetButtonBuilder(text: 'Action 3'),
+                ];
 
-                  final result = await AdaptiveBottomActionSheet(Theme.of(context).platform).show(
-                    context,
-                    actionButtons: actionButtons,
-                  );
-                  debugPrint(result);
-                },
-                child: const Text('Show Bottom Action Sheet'),
-              ),
+                final result = await AdaptiveWidgets.showBottomActionSheet(
+                  context,
+                  actionButtons: actionButtons,
+                );
+                debugPrint(result);
+              },
+              child: const Text('Show Bottom Action Sheet'),
             ),
           )
         ],
