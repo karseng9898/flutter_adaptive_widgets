@@ -1,6 +1,6 @@
-# Adaptive Widgets Flutter Example
+# Adaptive Widgets Flutter
 
-This Flutter example demonstrates how to use the `adaptive_widgets_flutter` package to create adaptive and responsive UI components that work seamlessly on both Android and iOS platforms. The example includes the usage of the following widgets:
+This demonstrates how to use the `adaptive_widgets_flutter` package to create adaptive and responsive UI components that work seamlessly on both Android and iOS platforms. The example includes the usage of the following widgets:
 
 1. **Refreshable ScrollView**
 2. **Alert Dialog**
