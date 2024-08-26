@@ -10,9 +10,11 @@ class IosBottomActionSheet implements AdaptiveBottomActionSheet {
     BuildContext context, {
     required List<AdaptiveBottomSheetButtonBuilder> actionButtons,
     bool dismissible = true,
+    bool useRootNavigator = false,
   }) {
     return showCupertinoModalPopup<T>(
       context: context,
+      useRootNavigator: useRootNavigator,
       builder: (context) {
         final cancelButtonBuilder = actionButtons.firstWhereOrNull(
           (element) => element.isCancelAction,

@@ -9,12 +9,14 @@ class AndroidBottomActionSheet implements AdaptiveBottomActionSheet {
     BuildContext context, {
     required List<AdaptiveBottomSheetButtonBuilder> actionButtons,
     bool dismissible = true,
+    bool useRootNavigator = false,
   }) {
     final items = actionButtons.sorted((a, b) => a.isCancelAction ? 1 : 0);
 
     return showModalBottomSheet<T>(
       context: context,
       isDismissible: dismissible,
+      useRootNavigator: useRootNavigator,
       builder: (context) {
         return SafeArea(
           child: ListView.separated(

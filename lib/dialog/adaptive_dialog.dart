@@ -36,5 +36,6 @@ abstract class AdaptiveDialog {
     String? content,
     required List<AdaptiveDialogButtonBuilder> actionButtons,
     bool dismissible,
+    bool useRootNavigator = false,
   });
 }

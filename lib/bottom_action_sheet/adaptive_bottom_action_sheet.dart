@@ -36,5 +36,6 @@ abstract class AdaptiveBottomActionSheet {
     BuildContext context, {
     required List<AdaptiveBottomSheetButtonBuilder> actionButtons,
     bool dismissible = true,
+    bool useRootNavigator = false,
   });
 }

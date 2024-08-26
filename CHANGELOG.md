@@ -27,3 +27,6 @@ Fix a bug that refreshable scroll view header is not working issue
 
 ## 0.0.14
 - Update Documentation
+
+## 0.0.16
+- Added useRootNavigatorParam for dialog and action sheet

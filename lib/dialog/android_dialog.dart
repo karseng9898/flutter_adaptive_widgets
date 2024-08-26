@@ -9,6 +9,7 @@ class AndroidDialog implements AdaptiveDialog {
     String? content,
     required List<AdaptiveDialogButtonBuilder> actionButtons,
     bool dismissible = false,
+    bool useRootNavigator = false,
   }) {
     List<Widget> getActions(BuildContext context) => actionButtons
         .map(
@@ -25,6 +26,7 @@ class AndroidDialog implements AdaptiveDialog {
     return showDialog<T>(
       context: context,
       barrierDismissible: dismissible,
+      useRootNavigator: useRootNavigator,
       builder: (context) {
         return AlertDialog.adaptive(
           title: Text(title),
