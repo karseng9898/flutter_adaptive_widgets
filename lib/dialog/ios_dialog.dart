@@ -28,10 +28,13 @@ class IOSDialog implements AdaptiveDialog {
       barrierDismissible: dismissible,
       useRootNavigator: useRootNavigator,
       builder: (context) {
-        return CupertinoAlertDialog(
-          title: Text(title),
-          content: content != null ? Text(content) : null,
-          actions: getActions(context),
+        return PopScope(
+          canPop: dismissible,
+          child: CupertinoAlertDialog(
+            title: Text(title),
+            content: content != null ? Text(content) : null,
+            actions: getActions(context),
+          ),
         );
       },
     );
