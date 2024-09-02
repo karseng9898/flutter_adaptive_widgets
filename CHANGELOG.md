@@ -33,3 +33,6 @@ Fix a bug that refreshable scroll view header is not working issue
 
 ## 0.0.17
 - Prevent back gesture for Dialog when dismissible is set to true on Android devices
+
+## 0.0.18
+- Fix unable to override useRootNavigator param issue

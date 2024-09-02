@@ -18,6 +18,7 @@ class AdaptiveWidgets {
     String? content,
     required List<AdaptiveDialogButtonBuilder> actionButtons,
     bool dismissible = true,
+    bool useRootNavigator = false,
   }) {
     return AdaptiveDialog(Theme.of(context).platform).show<T>(
       context,
@@ -25,6 +26,7 @@ class AdaptiveWidgets {
       content: content,
       actionButtons: actionButtons,
       dismissible: dismissible,
+      useRootNavigator: useRootNavigator,
     );
   }
 
@@ -32,11 +34,13 @@ class AdaptiveWidgets {
     BuildContext context, {
     required List<AdaptiveBottomSheetButtonBuilder> actionButtons,
     bool dismissible = true,
+    bool useRootNavigator = false,
   }) {
     return AdaptiveBottomActionSheet(Theme.of(context).platform).show<T>(
       context,
       actionButtons: actionButtons,
       dismissible: dismissible,
+      useRootNavigator: useRootNavigator,
     );
   }
 
