@@ -7,12 +7,13 @@ class IosBottomActionSheetButton implements AdaptiveBottomActionSheetButton {
   Widget build(
     BuildContext context, {
     required Widget child,
+    Widget Function(Widget actionSheetButton)? wrap,
     void Function(BuildContext context)? onPressed,
     required bool isDefaultAction,
     required bool isDestructiveAction,
     required bool isCancelAction,
   }) {
-    return CupertinoActionSheetAction(
+    final button = CupertinoActionSheetAction(
       onPressed: () {
         if (onPressed != null) {
           onPressed.call(context);
@@ -24,5 +25,11 @@ class IosBottomActionSheetButton implements AdaptiveBottomActionSheetButton {
       isDestructiveAction: isDestructiveAction,
       child: child,
     );
+
+    if (wrap != null) {
+      return wrap(button);
+    }
+
+    return button;
   }
 }

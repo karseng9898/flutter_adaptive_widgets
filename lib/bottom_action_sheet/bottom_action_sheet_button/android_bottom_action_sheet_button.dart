@@ -8,6 +8,7 @@ class AndroidBottomActionSheetButton
   Widget build(
     BuildContext context, {
     required Widget child,
+    Widget Function(Widget actionSheetButton)? wrap,
     void Function(BuildContext context)? onPressed,
     required bool isDefaultAction,
     required bool isDestructiveAction,
