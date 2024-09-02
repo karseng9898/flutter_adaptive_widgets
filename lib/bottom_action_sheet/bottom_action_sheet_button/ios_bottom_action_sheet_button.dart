@@ -1,11 +1,12 @@
-import 'adaptive_bottom_action_sheet_button.dart';
 import 'package:flutter/cupertino.dart';
+
+import 'adaptive_bottom_action_sheet_button.dart';
 
 class IosBottomActionSheetButton implements AdaptiveBottomActionSheetButton {
   @override
   Widget build(
     BuildContext context, {
-    required String text,
+    required Widget child,
     void Function(BuildContext context)? onPressed,
     required bool isDefaultAction,
     required bool isDestructiveAction,
@@ -21,7 +22,7 @@ class IosBottomActionSheetButton implements AdaptiveBottomActionSheetButton {
       },
       isDefaultAction: isDefaultAction,
       isDestructiveAction: isDestructiveAction,
-      child: Text(text),
+      child: child,
     );
   }
 }

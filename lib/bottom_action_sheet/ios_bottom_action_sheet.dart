@@ -22,9 +22,10 @@ class IosBottomActionSheet implements AdaptiveBottomActionSheet {
 
         Widget? cancelButton;
         if (cancelButtonBuilder != null) {
-          cancelButton = AdaptiveBottomActionSheetButton(Theme.of(context).platform).build(
+          cancelButton =
+              AdaptiveBottomActionSheetButton(Theme.of(context).platform).build(
             context,
-            text: cancelButtonBuilder.text,
+            child: cancelButtonBuilder.child,
             onPressed: cancelButtonBuilder.onPressed,
             isDefaultAction: cancelButtonBuilder.isDefaultAction,
             isDestructiveAction: cancelButtonBuilder.isDestructiveAction,
@@ -35,20 +36,18 @@ class IosBottomActionSheet implements AdaptiveBottomActionSheet {
         final items = actionButtons.where((element) => !element.isCancelAction);
 
         return CupertinoActionSheet(
-          actions: List.generate(
-            items.length,
-            (index) {
-              final item = items.elementAt(index);
-              return AdaptiveBottomActionSheetButton(Theme.of(context).platform).build(
-                context,
-                text: item.text,
-                onPressed: item.onPressed,
-                isDefaultAction: item.isDefaultAction,
-                isDestructiveAction: item.isDestructiveAction,
-                isCancelAction: item.isCancelAction,
-              );
-            },
-          ),
+          actions: items
+              .map((item) =>
+                  AdaptiveBottomActionSheetButton(Theme.of(context).platform)
+                      .build(
+                    context,
+                    child: item.child,
+                    onPressed: item.onPressed,
+                    isDefaultAction: item.isDefaultAction,
+                    isDestructiveAction: item.isDestructiveAction,
+                    isCancelAction: item.isCancelAction,
+                  ))
+              .toList(),
           cancelButton: cancelButton,
         );
       },

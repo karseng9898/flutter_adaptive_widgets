@@ -24,9 +24,10 @@ class AndroidBottomActionSheet implements AdaptiveBottomActionSheet {
             padding: const EdgeInsets.all(20),
             itemBuilder: (context, index) {
               final item = items[index];
-              return AdaptiveBottomActionSheetButton(Theme.of(context).platform).build(
+              return AdaptiveBottomActionSheetButton(Theme.of(context).platform)
+                  .build(
                 context,
-                text: item.text,
+                child: item.child,
                 onPressed: item.onPressed,
                 isDefaultAction: item.isDefaultAction,
                 isDestructiveAction: item.isDestructiveAction,

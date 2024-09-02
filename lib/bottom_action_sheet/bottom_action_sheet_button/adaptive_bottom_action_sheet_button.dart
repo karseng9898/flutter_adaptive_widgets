@@ -1,6 +1,7 @@
+import 'package:flutter/widgets.dart';
+
 import 'android_bottom_action_sheet_button.dart';
 import 'ios_bottom_action_sheet_button.dart';
-import 'package:flutter/widgets.dart';
 
 abstract class AdaptiveBottomActionSheetButton {
   factory AdaptiveBottomActionSheetButton(TargetPlatform platform) {
@@ -16,7 +17,7 @@ abstract class AdaptiveBottomActionSheetButton {
 
   Widget build(
     BuildContext context, {
-    required String text,
+    required Widget child,
     void Function(BuildContext context)? onPressed,
     required bool isDefaultAction,
     required bool isDestructiveAction,

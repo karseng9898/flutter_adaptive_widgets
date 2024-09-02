@@ -71,12 +71,16 @@ class Home extends StatelessWidget {
               onPressed: () async {
                 final actionButtons = [
                   AdaptiveBottomSheetButtonBuilder(
-                    text: 'Action 1',
-                    onPressed: (context) => Navigator.of(context).pop('action 1'),
+                    child: const Text('Action 1'),
+                    onPressed: (context) =>
+                        Navigator.of(context).pop('action 1'),
                   ),
-                  AdaptiveBottomSheetButtonBuilder(text: 'Action 2'),
-                  AdaptiveBottomSheetButtonBuilder(text: 'Cancel', isCancelAction: true),
-                  AdaptiveBottomSheetButtonBuilder(text: 'Action 3'),
+                  AdaptiveBottomSheetButtonBuilder(
+                      child: const Text('Action 2')),
+                  AdaptiveBottomSheetButtonBuilder(
+                      child: const Text('Cancel'), isCancelAction: true),
+                  AdaptiveBottomSheetButtonBuilder(
+                      child: const Text('Action 3')),
                 ];
 
                 final result = await AdaptiveWidgets.showBottomActionSheet(
