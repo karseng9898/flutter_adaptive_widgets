@@ -6,10 +6,9 @@ import 'ios_bottom_action_sheet_button.dart';
 abstract class AdaptiveBottomActionSheetButton {
   factory AdaptiveBottomActionSheetButton(TargetPlatform platform) {
     switch (platform) {
-      case TargetPlatform.android:
-        return AndroidBottomActionSheetButton();
       case TargetPlatform.iOS:
         return IosBottomActionSheetButton();
+      case TargetPlatform.android:
       default:
         return AndroidBottomActionSheetButton();
     }

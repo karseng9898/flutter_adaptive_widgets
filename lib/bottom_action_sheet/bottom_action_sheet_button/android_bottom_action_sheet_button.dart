@@ -14,7 +14,7 @@ class AndroidBottomActionSheetButton
     required bool isDestructiveAction,
     required bool isCancelAction,
   }) {
-    return TextButton(
+    final button = TextButton(
         style: TextButton.styleFrom(
           alignment: Alignment.centerLeft,
           textStyle: TextStyle(
@@ -29,5 +29,11 @@ class AndroidBottomActionSheetButton
           }
         },
         child: child);
+
+    if (wrap != null) {
+      return wrap(button);
+    }
+
+    return button;
   }
 }

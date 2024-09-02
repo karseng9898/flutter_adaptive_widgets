@@ -8,12 +8,14 @@ export 'bottom_action_sheet_button/adaptive_bottom_action_sheet_button.dart';
 class AdaptiveBottomSheetButtonBuilder {
   final Widget child;
   final void Function(BuildContext context)? onPressed;
+  Widget Function(Widget actionSheetButton)? wrap;
   final bool isDefaultAction;
   final bool isDestructiveAction;
   final bool isCancelAction;
 
   AdaptiveBottomSheetButtonBuilder({
     required this.child,
+    this.wrap,
     this.onPressed,
     this.isDefaultAction = false,
     this.isDestructiveAction = false,
