@@ -12,25 +12,38 @@ class IOSDatePicker implements AdaptiveDatePicker {
     required DateTime initialDate,
   }) async {
     _selectedDate = initialDate;
-    await showCupertinoModalPopup<DateTime>(
+    return await showCupertinoModalPopup<DateTime>(
       context: context,
       builder: (context) {
-        return Container(
-          height: 300,
-          color: CupertinoColors.systemBackground.resolveFrom(context),
-          child: SafeArea(
-            top: false,
-            child: CupertinoDatePicker(
-              mode: CupertinoDatePickerMode.date,
-              minimumDate: minimumDate,
-              maximumDate: maximumDate,
-              initialDateTime: initialDate,
-              onDateTimeChanged: (value) => _selectedDate = value,
-            ),
+        return CupertinoActionSheet(
+          cancelButton: CupertinoActionSheetAction(
+            isDefaultAction: true,
+            onPressed: () => Navigator.of(context).pop(),
+            child: const Text('Cancel'),
           ),
+          title: Column(
+            children: [
+              const Text('Select date'),
+              SizedBox(
+                height: 250,
+                child: CupertinoDatePicker(
+                  mode: CupertinoDatePickerMode.date,
+                  minimumDate: minimumDate,
+                  maximumDate: maximumDate,
+                  initialDateTime: initialDate,
+                  onDateTimeChanged: (value) => _selectedDate = value,
+                ),
+              ),
+            ],
+          ),
+          actions: [
+            CupertinoActionSheetAction(
+              onPressed: () => Navigator.of(context).pop(_selectedDate),
+              child: const Text('Confirm'),
+            )
+          ],
         );
       },
     );
-    return _selectedDate;
   }
 }
