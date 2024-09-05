@@ -21,20 +21,15 @@ class IOSDatePicker implements AdaptiveDatePicker {
             onPressed: () => Navigator.of(context).pop(),
             child: const Text('Cancel'),
           ),
-          title: Column(
-            children: [
-              const Text('Select date'),
-              SizedBox(
-                height: 250,
-                child: CupertinoDatePicker(
-                  mode: CupertinoDatePickerMode.date,
-                  minimumDate: minimumDate,
-                  maximumDate: maximumDate,
-                  initialDateTime: initialDate,
-                  onDateTimeChanged: (value) => _selectedDate = value,
-                ),
-              ),
-            ],
+          title: SizedBox(
+            height: 250,
+            child: CupertinoDatePicker(
+              mode: CupertinoDatePickerMode.date,
+              minimumDate: minimumDate,
+              maximumDate: maximumDate,
+              initialDateTime: initialDate,
+              onDateTimeChanged: (value) => _selectedDate = value,
+            ),
           ),
           actions: [
             CupertinoActionSheetAction(
