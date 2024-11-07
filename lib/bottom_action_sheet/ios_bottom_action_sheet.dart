@@ -34,22 +34,25 @@ class IosBottomActionSheet implements AdaptiveBottomActionSheet {
 
         final items = actionButtons.where((element) => !element.isCancelAction);
 
-        return CupertinoActionSheet(
-          actions: List.generate(
-            items.length,
-            (index) {
-              final item = items.elementAt(index);
-              return AdaptiveBottomActionSheetButton(Theme.of(context).platform).build(
-                context,
-                text: item.text,
-                onPressed: item.onPressed,
-                isDefaultAction: item.isDefaultAction,
-                isDestructiveAction: item.isDestructiveAction,
-                isCancelAction: item.isCancelAction,
-              );
-            },
+        return CupertinoTheme(
+          data: CupertinoThemeData(),
+          child: CupertinoActionSheet(
+            actions: List.generate(
+              items.length,
+              (index) {
+                final item = items.elementAt(index);
+                return AdaptiveBottomActionSheetButton(Theme.of(context).platform).build(
+                  context,
+                  text: item.text,
+                  onPressed: item.onPressed,
+                  isDefaultAction: item.isDefaultAction,
+                  isDestructiveAction: item.isDestructiveAction,
+                  isCancelAction: item.isCancelAction,
+                );
+              },
+            ),
+            cancelButton: cancelButton,
           ),
-          cancelButton: cancelButton,
         );
       },
     );

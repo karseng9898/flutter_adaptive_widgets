@@ -4,23 +4,23 @@ import 'package:flutter/material.dart';
 class AndroidDialog implements AdaptiveDialog {
   @override
   Future<T?> show<T>(
-      BuildContext context, {
-        required String title,
-        String? content,
-        required List<AdaptiveDialogButtonBuilder> actionButtons,
-        bool dismissible = false,
-        bool useRootNavigator = false,
-      }) {
+    BuildContext context, {
+    required String title,
+    String? content,
+    required List<AdaptiveDialogButtonBuilder> actionButtons,
+    bool dismissible = false,
+    bool useRootNavigator = false,
+  }) {
     List<Widget> getActions(BuildContext context) => actionButtons
         .map(
           (e) => AdaptiveDialogButton(TargetPlatform.android).build(
-        context,
-        text: e.text,
-        onPressed: e.onPressed,
-        isDefaultAction: e.isDefaultAction,
-        isDestructiveAction: e.isDestructiveAction,
-      ),
-    )
+            context,
+            text: e.text,
+            onPressed: e.onPressed,
+            isDefaultAction: e.isDefaultAction,
+            isDestructiveAction: e.isDestructiveAction,
+          ),
+        )
         .toList();
 
     return showDialog<T>(
