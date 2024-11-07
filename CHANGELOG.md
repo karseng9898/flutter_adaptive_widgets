@@ -1,44 +1,47 @@
+## 0.0.21
+- Updated the iOS widget to utilize the default Cupertino theme.
+
 ## 0.0.20
-- Update iOS Date Picker UI
+- Updated the iOS Date Picker UI.
 
 ## 0.0.19
-- Update iOS date picker UI
+- Updated the iOS date picker UI.
 
 ## 0.0.18
-- Fix unable to override useRootNavigator param issue
+- Fixed an issue preventing the override of the `useRootNavigator` parameter.
 
 ## 0.0.17
-- Prevent back gesture for Dialog when dismissible is set to true on Android devices
+- Prevented back gesture for Dialog when `dismissible` is set to true on Android devices.
 
 ## 0.0.16
-- Added useRootNavigatorParam for dialog and action sheet
+- Added `useRootNavigator` parameter for dialog and action sheet.
 
 ## 0.0.14
-- Update Documentation
+- Updated documentation.
 
 ## 0.0.13
-- Added padding support for refreshable scroll view
+- Added padding support for refreshable scroll view.
 
 ## 0.0.12
-- Added padding support for refreshable scroll view
+- Added padding support for refreshable scroll view.
 
 ## 0.0.11
-Fix a bug that refreshable scroll view header is not working issue
+- Fixed a bug where the refreshable scroll view header was not functioning correctly.
 
 ## 0.0.10
-Fix a bug that unable to pop the dialog correctly
+- Fixed a bug that prevented the dialog from popping correctly.
 
 ## 0.0.9
-Lower down the sdk constraints
+- Lowered the SDK constraints.
 
 ## 0.0.8
-just some code cleanup
+- Performed code cleanup.
 
 ## 0.0.5
-Update example
+- Updated example.
 
 ## 0.0.4
-Added Adaptive Bottom Sheets
+- Added adaptive bottom sheets.
 
 ## 0.0.1
-Initial Release
+- Initial release.
