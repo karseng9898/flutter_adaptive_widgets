@@ -1,6 +1,6 @@
 name: adaptive_widgets_flutter
 description: "A Flutter package for supporting adaptive widgets for iOS and Android platform."
-version: 0.0.21
+version: 0.0.22
 homepage: https://github.com/karseng9898/flutter_adaptive_widgets.git
 
 environment:

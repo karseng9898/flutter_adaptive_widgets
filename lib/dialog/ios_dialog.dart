@@ -10,6 +10,7 @@ class IOSDialog implements AdaptiveDialog {
     required List<AdaptiveDialogButtonBuilder> actionButtons,
     bool dismissible = false,
     bool useRootNavigator = false,
+    Brightness? brightness,
   }) {
     List<Widget> getActions(BuildContext context) => actionButtons
         .map(
@@ -29,7 +30,7 @@ class IOSDialog implements AdaptiveDialog {
       useRootNavigator: useRootNavigator,
       builder: (context) {
         return CupertinoTheme(
-          data: CupertinoThemeData(),
+          data: CupertinoThemeData(brightness: brightness),
           child: PopScope(
             canPop: dismissible,
             child: CupertinoAlertDialog(

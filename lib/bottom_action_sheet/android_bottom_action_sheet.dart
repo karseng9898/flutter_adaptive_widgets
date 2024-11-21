@@ -10,6 +10,7 @@ class AndroidBottomActionSheet implements AdaptiveBottomActionSheet {
     required List<AdaptiveBottomSheetButtonBuilder> actionButtons,
     bool dismissible = true,
     bool useRootNavigator = false,
+    Brightness? brightness,
   }) {
     final items = actionButtons.sorted((a, b) => a.isCancelAction ? 1 : 0);
 

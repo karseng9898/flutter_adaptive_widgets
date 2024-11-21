@@ -16,7 +16,12 @@ class AndroidRefreshableScrollView implements AdaptiveRefreshableScrollView {
     ScrollBehavior? scrollBehavior,
     required bool shrinkWrap,
     Color? color,
+
+    /// The color of the refresh section background. Only for iOS.
     Color? refreshControlBackgroundColor,
+
+    /// The background color of the refresh indicator. Only for Android.
+    Color? refreshIndicatorBackgroundColor,
     EdgeInsets padding = EdgeInsets.zero,
   }) {
     final scrollView = CustomScrollView(
@@ -41,7 +46,7 @@ class AndroidRefreshableScrollView implements AdaptiveRefreshableScrollView {
         key: key,
         onRefresh: onRefresh,
         color: color,
-        backgroundColor: refreshControlBackgroundColor,
+        backgroundColor: refreshIndicatorBackgroundColor,
         child: scrollView,
       );
     }

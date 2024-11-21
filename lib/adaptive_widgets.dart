@@ -1,9 +1,8 @@
-library adaptive_widgets;
-
 import 'package:adaptive_widgets_flutter/bottom_action_sheet/adaptive_bottom_action_sheet.dart';
 import 'package:adaptive_widgets_flutter/date_picker/adaptive_date_picker.dart';
 import 'package:adaptive_widgets_flutter/dialog/adaptive_dialog.dart';
 import 'package:adaptive_widgets_flutter/refreshable_scroll_view/adaptive_refreshable_scroll_view.dart';
+import 'package:adaptive_widgets_flutter/time_picker/adaptive_time_picker.dart';
 import 'package:flutter/material.dart';
 
 export 'bottom_action_sheet/adaptive_bottom_action_sheet.dart';
@@ -19,6 +18,9 @@ class AdaptiveWidgets {
     required List<AdaptiveDialogButtonBuilder> actionButtons,
     bool dismissible = true,
     bool useRootNavigator = false,
+
+    /// only for iOS
+    Brightness? brightness,
   }) {
     return AdaptiveDialog(Theme.of(context).platform).show<T>(
       context,
@@ -35,12 +37,16 @@ class AdaptiveWidgets {
     required List<AdaptiveBottomSheetButtonBuilder> actionButtons,
     bool dismissible = true,
     bool useRootNavigator = false,
+
+    /// only for iOS
+    Brightness? brightness,
   }) {
     return AdaptiveBottomActionSheet(Theme.of(context).platform).show<T>(
       context,
       actionButtons: actionButtons,
       dismissible: dismissible,
       useRootNavigator: useRootNavigator,
+      brightness: brightness,
     );
   }
 
@@ -58,7 +64,12 @@ class AdaptiveWidgets {
     ScrollBehavior? scrollBehavior,
     bool shrinkWrap = false,
     Color? color,
+
+    /// The color of the refresh section background. Only for iOS.
     Color? refreshControlBackgroundColor,
+
+    /// The background color of the refresh indicator. Only for Android.
+    Color? refreshIndicatorBackgroundColor,
     EdgeInsets padding = EdgeInsets.zero,
   }) {
     return AdaptiveRefreshableScrollView(Theme.of(context).platform).build(
@@ -84,6 +95,11 @@ class AdaptiveWidgets {
     DateTime? minimumDate,
     DateTime? maximumDate,
     DateTime? initialDate,
+
+    /// only for iOS
+    Brightness? brightness,
+    bool dismissible = true,
+    bool useRootNavigator = false,
   }) async {
     final minDate = minimumDate ?? DateTime(1900);
     final maxDate = maximumDate ?? DateTime(2100);
@@ -103,6 +119,19 @@ class AdaptiveWidgets {
       minimumDate: minDate,
       maximumDate: maxDate,
       initialDate: initDate,
+      brightness: brightness,
+    );
+  }
+
+  static Future<DateTime?> showTimePicker(
+    BuildContext context, {
+    DateTime? initialTime,
+    bool dismissible = true,
+    bool useRootNavigator = false,
+  }) {
+    return AdaptiveTimePicker(Theme.of(context).platform).show(
+      context,
+      initialTime: initialTime ?? DateTime.now(),
     );
   }
 }

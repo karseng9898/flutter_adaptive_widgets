@@ -37,5 +37,8 @@ abstract class AdaptiveBottomActionSheet {
     required List<AdaptiveBottomSheetButtonBuilder> actionButtons,
     bool dismissible = true,
     bool useRootNavigator = false,
+
+    /// only for iOS
+    Brightness? brightness,
   });
 }
