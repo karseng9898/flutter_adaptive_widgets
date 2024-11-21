@@ -8,6 +8,7 @@ class AndroidDatePicker implements AdaptiveDatePicker {
     required DateTime minimumDate,
     required DateTime maximumDate,
     required DateTime initialDate,
+    Brightness? brightness,
   }) {
     return showDatePicker(
       context: context,

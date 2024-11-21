@@ -10,13 +10,14 @@ class IOSDatePicker implements AdaptiveDatePicker {
     required DateTime minimumDate,
     required DateTime maximumDate,
     required DateTime initialDate,
+    Brightness? brightness,
   }) async {
     _selectedDate = initialDate;
     return await showCupertinoModalPopup<DateTime>(
       context: context,
       builder: (context) {
         return CupertinoTheme(
-          data: CupertinoThemeData(),
+          data: CupertinoThemeData(brightness: brightness),
           child: CupertinoActionSheet(
             cancelButton: CupertinoActionSheetAction(
               isDefaultAction: true,

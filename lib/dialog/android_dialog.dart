@@ -10,6 +10,7 @@ class AndroidDialog implements AdaptiveDialog {
     required List<AdaptiveDialogButtonBuilder> actionButtons,
     bool dismissible = false,
     bool useRootNavigator = false,
+    Brightness? brightness,
   }) {
     List<Widget> getActions(BuildContext context) => actionButtons
         .map(

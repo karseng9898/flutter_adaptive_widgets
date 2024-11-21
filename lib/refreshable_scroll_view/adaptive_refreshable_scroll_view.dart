@@ -27,7 +27,12 @@ abstract class AdaptiveRefreshableScrollView {
     ScrollBehavior? scrollBehavior,
     required bool shrinkWrap,
     Color? color,
+
+    /// The color of the refresh section background. Only for iOS.
     Color? refreshControlBackgroundColor,
+
+    /// The background color of the refresh indicator. Only for Android.
+    Color? refreshIndicatorBackgroundColor,
     EdgeInsets padding = EdgeInsets.zero,
   });
 }

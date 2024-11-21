@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:adaptive_widgets_flutter/dialog/android_dialog.dart';
 import 'package:adaptive_widgets_flutter/dialog/ios_dialog.dart';
 import 'package:flutter/widgets.dart';
@@ -37,5 +39,8 @@ abstract class AdaptiveDialog {
     required List<AdaptiveDialogButtonBuilder> actionButtons,
     bool dismissible,
     bool useRootNavigator = false,
+
+    /// only for iOS
+    Brightness? brightness,
   });
 }
