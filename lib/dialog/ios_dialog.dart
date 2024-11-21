@@ -30,7 +30,7 @@ class IOSDialog implements AdaptiveDialog {
       useRootNavigator: useRootNavigator,
       builder: (context) {
         return CupertinoTheme(
-          data: CupertinoThemeData(),
+          data: CupertinoThemeData(brightness: brightness),
           child: PopScope(
             canPop: dismissible,
             child: CupertinoAlertDialog(

@@ -9,12 +9,16 @@ class AndroidDatePicker implements AdaptiveDatePicker {
     required DateTime maximumDate,
     required DateTime initialDate,
     Brightness? brightness,
+    bool dismissible = true,
+    bool useRootNavigator = false,
   }) {
     return showDatePicker(
       context: context,
       firstDate: minimumDate,
       lastDate: maximumDate,
       initialDate: initialDate,
+      barrierDismissible: dismissible,
+      useRootNavigator: useRootNavigator,
     );
   }
 }

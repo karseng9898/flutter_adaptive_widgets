@@ -20,5 +20,7 @@ abstract class AdaptiveDatePicker {
     required DateTime maximumDate,
     required DateTime initialDate,
     Brightness? brightness,
+    bool dismissible = true,
+    bool useRootNavigator = false,
   });
 }

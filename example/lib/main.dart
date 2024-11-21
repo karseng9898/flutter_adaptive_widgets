@@ -48,6 +48,15 @@ class Home extends StatelessWidget {
           SliverToBoxAdapter(
             child: CupertinoButton.filled(
               onPressed: () async {
+                await AdaptiveWidgets.showTimePicker(context);
+              },
+              child: const Text('Show Time Picker'),
+            ),
+          ),
+          const SliverPadding(padding: EdgeInsets.only(top: 20)),
+          SliverToBoxAdapter(
+            child: CupertinoButton.filled(
+              onPressed: () async {
                 await AdaptiveWidgets.showDialog(
                   context,
                   title: 'Sample Title',
@@ -87,7 +96,7 @@ class Home extends StatelessWidget {
               },
               child: const Text('Show Bottom Action Sheet'),
             ),
-          )
+          ),
         ],
       ),
     );

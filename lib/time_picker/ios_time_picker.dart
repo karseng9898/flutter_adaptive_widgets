@@ -1,20 +1,17 @@
-import 'package:adaptive_widgets_flutter/date_picker/adaptive_date_picker.dart';
+import 'package:adaptive_widgets_flutter/time_picker/adaptive_time_picker.dart';
 import 'package:flutter/cupertino.dart';
 
-class IOSDatePicker implements AdaptiveDatePicker {
+class IOSTimePicker implements AdaptiveTimePicker {
   DateTime? _selectedDate;
-
   @override
   Future<DateTime?> show(
     BuildContext context, {
-    required DateTime minimumDate,
-    required DateTime maximumDate,
-    required DateTime initialDate,
+    required DateTime initialTime,
     Brightness? brightness,
     bool dismissible = true,
     bool useRootNavigator = false,
   }) async {
-    _selectedDate = initialDate;
+    _selectedDate = initialTime;
     return await showCupertinoModalPopup<DateTime>(
       context: context,
       barrierDismissible: dismissible,
@@ -29,12 +26,10 @@ class IOSDatePicker implements AdaptiveDatePicker {
               child: const Text('Cancel'),
             ),
             title: SizedBox(
-              height: 250,
+              height: 200,
               child: CupertinoDatePicker(
-                mode: CupertinoDatePickerMode.date,
-                minimumDate: minimumDate,
-                maximumDate: maximumDate,
-                initialDateTime: initialDate,
+                mode: CupertinoDatePickerMode.time,
+                initialDateTime: initialTime,
                 onDateTimeChanged: (value) => _selectedDate = value,
               ),
             ),
