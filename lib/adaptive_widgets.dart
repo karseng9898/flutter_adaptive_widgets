@@ -29,6 +29,7 @@ class AdaptiveWidgets {
       actionButtons: actionButtons,
       dismissible: dismissible,
       useRootNavigator: useRootNavigator,
+      brightness: brightness,
     );
   }
 
@@ -128,10 +129,14 @@ class AdaptiveWidgets {
     DateTime? initialTime,
     bool dismissible = true,
     bool useRootNavigator = false,
+
+    /// only for iOS
+    Brightness? brightness,
   }) {
     return AdaptiveTimePicker(Theme.of(context).platform).show(
       context,
       initialTime: initialTime ?? DateTime.now(),
+      brightness: brightness,
     );
   }
 }
