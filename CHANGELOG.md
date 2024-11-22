@@ -1,6 +1,9 @@
 
 ## **Changelog**
 
+### **Version 0.0.23**
+- Added missing **brightness** params.
+
 ### **Version 0.0.22**
 - Introduced **Time Picker** functionality.
 - Added **brightness** support for iOS widgets.
