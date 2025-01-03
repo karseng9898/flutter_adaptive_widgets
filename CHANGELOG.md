@@ -1,6 +1,10 @@
 
 ## **Changelog**
 
+### **Version 0.0.25**
+- Updated the README file with improved formatting and added `<img>` tags for all images.
+- No functional or API changes in this version.
+
 ### **Version 0.0.24**
 - **Breaking Changes**: The bottom action sheet now uses a `label` (Widget) parameter instead of `text` (String).
 - Updated the UI for the Android bottom action sheet.
