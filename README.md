@@ -1,17 +1,29 @@
 # Adaptive Widgets Flutter
 
-This demonstrates how to use the `adaptive_widgets_flutter` package to create adaptive and responsive UI components that work seamlessly on both Android and iOS platforms. The example includes the usage of the following widgets:
+Bring adaptive and responsive UI to life effortlessly with the `adaptive_widgets_flutter` package! 🌟 This package empowers you to create platform-specific UI components that seamlessly adapt to Android and iOS, ensuring a consistent and polished user experience.
 
-1. **Refreshable ScrollView**
-2. **Alert Dialog**
-3. **Bottom Action Sheet**
-4. **Date Picker**
+With `adaptive_widgets_flutter`, you can build beautiful, functional, and adaptive UI elements with ease. Here's what you get:
 
-## Usage
+## ✨ Key Features
 
-### Refreshable ScrollView
+1. **Refreshable ScrollView** 🌀  
+   A pull-to-refresh scroll view that adapts its behavior to the platform.
+2. **Alert Dialog** ⚠️  
+   Fully customizable platform-specific alert dialogs.
+3. **Bottom Action Sheet** 🛠️  
+   Native-style bottom action sheets for user actions.
+4. **Date Picker** 📅  
+   Intuitive and native platform-style date pickers.
+5. **Time Picker** ⏰ _(New!)_  
+   Select times with a platform-adaptive interface.
 
-The `AdaptiveWidgets.buildRefreshableScrollView` provides a scrollable view that supports pull-to-refresh functionality. This scroll view adapts its appearance and behavior based on the platform (iOS or Android).
+---
+
+## 🛠 Usage Examples
+
+### 1. Refreshable ScrollView
+
+Effortlessly create a scrollable view with pull-to-refresh functionality.
 
 ```dart
 AdaptiveWidgets.buildRefreshableScrollView(
@@ -26,9 +38,17 @@ AdaptiveWidgets.buildRefreshableScrollView(
 );
 ```
 
-### Alert Dialog
+🎥 **GIF Previews:**  
+**iOS:**  
+<img src="readme_assets/ios_refreshable_scroll_view.gif" alt="Refreshable ScrollView on iOS" width="250" />  
+**Android:**  
+<img src="readme_assets/android_refreshable_scroll_view.gif" alt="Refreshable ScrollView on Android" width="250" />
 
-The `AdaptiveWidgets.showDialog` method allows you to display an alert dialog with customizable action buttons. The dialog's appearance adapts to the platform, ensuring a consistent user experience.
+---
+
+### 2. Alert Dialog
+
+Display platform-native alert dialogs with ease.
 
 ```dart
 CupertinoButton.filled(
@@ -51,26 +71,45 @@ CupertinoButton.filled(
 );
 ```
 
-### Bottom Action Sheet
+📸 **Screenshots:**  
+**iOS:**  
+<img src="readme_assets/ios_alert.png" alt="Alert Dialog on iOS" width="250" />  
+**Android:**  
+<img src="readme_assets/android_alert.png" alt="Alert Dialog on Android" width="250" />
 
-The `AdaptiveWidgets.showBottomActionSheet` method provides a bottom action sheet that adapts its style to the platform. You can define multiple action buttons with customizable labels and behaviors.
+---
+
+### 3. Bottom Action Sheet
+
+Create platform-specific bottom action sheets for user actions.
 
 ```dart
 CupertinoButton.filled(
   onPressed: () async {
     final actionButtons = [
       AdaptiveBottomSheetButtonBuilder(
-        text: 'Action 1',
+        child: const Text('Action 1'),
         onPressed: (context) => Navigator.of(context).pop('action 1'),
       ),
-      AdaptiveBottomSheetButtonBuilder(text: 'Action 2'),
-      AdaptiveBottomSheetButtonBuilder(text: 'Cancel', isCancelAction: true),
-      AdaptiveBottomSheetButtonBuilder(text: 'Action 3'),
+     AdaptiveBottomSheetButtonBuilder(
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(Icons.adaptive.share),
+            const SizedBox(width: 10),
+            const Text('Share'),
+          ],
+        ),
+      ),
+      AdaptiveBottomSheetButtonBuilder(child: const Text('Cancel'), isCancelAction: true),
+      AdaptiveBottomSheetButtonBuilder(child: const Text('Action 3')),
     ];
 
     final result = await AdaptiveWidgets.showBottomActionSheet(
       context,
       actionButtons: actionButtons,
+      title: const Text('Sample Title'),
+      message: const Text('Sample Message'),
     );
     debugPrint(result);
   },
@@ -78,9 +117,17 @@ CupertinoButton.filled(
 );
 ```
 
-### Date Picker
+📸 **Screenshots:**   
+**iOS:**  
+<img src="readme_assets/ios_action_sheet.png" alt="Bottom Action Sheet on iOS" width="250" />  
+**Android:**  
+<img src="readme_assets/android_action_sheet.png" alt="Bottom Action Sheet on Android" width="250" />
 
-The `AdaptiveWidgets.showDatePicker` method displays a date picker that adapts to the platform's native style. The selected date can be handled asynchronously.
+---
+
+### 4. Date Picker
+
+Pick dates with a native platform-style interface.
 
 ```dart
 CupertinoButton.filled(
@@ -91,7 +138,43 @@ CupertinoButton.filled(
 );
 ```
 
+📸 **Screenshots:**  
+**iOS:**  
+<img src="readme_assets/ios_date_picker.png" alt="Date Picker on iOS" width="250" />  
+**Android:**  
+<img src="readme_assets/android_date_picker.png" alt="Date Picker on Android" width="250" />
 
-## License
+---
+
+### 5. Time Picker (New!)
+
+A modern and native time picker for seamless time selection.
+
+```dart
+CupertinoButton.filled(
+  onPressed: () async {
+    await AdaptiveWidgets.showTimePicker(context);
+  },
+  child: const Text('Show Time Picker'),
+);
+```
+
+🎥 **GIF Previews:**  
+**iOS:**  
+<img src="readme_assets/ios_time_picker.png" alt="Time Picker on iOS" width="250" />  
+**Android:**  
+<img src="readme_assets/android_time_picker.png" alt="Time Picker on Android" width="250" />
+
+---
+
+## 🚀 Get Started
+
+Integrate `adaptive_widgets_flutter` into your project and elevate your UI to new heights. Visit the [documentation](https://pub.dev/packages/adaptive_widgets_flutter) for detailed guidance.
+
+---
+
+## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
