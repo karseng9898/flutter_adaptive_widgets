@@ -1,6 +1,11 @@
 
 ## **Changelog**
 
+### **Version 0.0.26**
+- Fixed an issue where images were not displaying correctly on the pub.dev README.
+- Updated image links in the README to use publicly hosted URLs from GitHub.
+- No functional or API changes in this version.
+
 ### **Version 0.0.25**
 - Updated the README file with improved formatting and added `<img>` tags for all images.
 - No functional or API changes in this version.

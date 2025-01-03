@@ -1,3 +1,4 @@
+
 # Adaptive Widgets Flutter
 
 Bring adaptive and responsive UI to life effortlessly with the `adaptive_widgets_flutter` package! 🌟 This package empowers you to create platform-specific UI components that seamlessly adapt to Android and iOS, ensuring a consistent and polished user experience.
@@ -40,9 +41,9 @@ AdaptiveWidgets.buildRefreshableScrollView(
 
 🎥 **GIF Previews:**  
 **iOS:**  
-<img src="readme_assets/ios_refreshable_scroll_view.gif" alt="Refreshable ScrollView on iOS" width="250" />  
+<img src="https://raw.githubusercontent.com/karseng9898/flutter_adaptive_widgets/main/readme_assets/ios_refreshable_scroll_view.gif" alt="Refreshable ScrollView on iOS" width="250" />  
 **Android:**  
-<img src="readme_assets/android_refreshable_scroll_view.gif" alt="Refreshable ScrollView on Android" width="250" />
+<img src="https://raw.githubusercontent.com/karseng9898/flutter_adaptive_widgets/main/readme_assets/android_refreshable_scroll_view.gif" alt="Refreshable ScrollView on Android" width="250" />
 
 ---
 
@@ -73,9 +74,9 @@ CupertinoButton.filled(
 
 📸 **Screenshots:**  
 **iOS:**  
-<img src="readme_assets/ios_alert.png" alt="Alert Dialog on iOS" width="250" />  
+<img src="https://raw.githubusercontent.com/karseng9898/flutter_adaptive_widgets/main/readme_assets/ios_alert.png" alt="Alert Dialog on iOS" width="250" />  
 **Android:**  
-<img src="readme_assets/android_alert.png" alt="Alert Dialog on Android" width="250" />
+<img src="https://raw.githubusercontent.com/karseng9898/flutter_adaptive_widgets/main/readme_assets/android_alert.png" alt="Alert Dialog on Android" width="250" />
 
 ---
 
@@ -119,9 +120,9 @@ CupertinoButton.filled(
 
 📸 **Screenshots:**   
 **iOS:**  
-<img src="readme_assets/ios_action_sheet.png" alt="Bottom Action Sheet on iOS" width="250" />  
+<img src="https://raw.githubusercontent.com/karseng9898/flutter_adaptive_widgets/main/readme_assets/ios_action_sheet.png" alt="Bottom Action Sheet on iOS" width="250" />  
 **Android:**  
-<img src="readme_assets/android_action_sheet.png" alt="Bottom Action Sheet on Android" width="250" />
+<img src="https://raw.githubusercontent.com/karseng9898/flutter_adaptive_widgets/main/readme_assets/android_action_sheet.png" alt="Bottom Action Sheet on Android" width="250" />
 
 ---
 
@@ -140,9 +141,9 @@ CupertinoButton.filled(
 
 📸 **Screenshots:**  
 **iOS:**  
-<img src="readme_assets/ios_date_picker.png" alt="Date Picker on iOS" width="250" />  
+<img src="https://raw.githubusercontent.com/karseng9898/flutter_adaptive_widgets/main/readme_assets/ios_date_picker.png" alt="Date Picker on iOS" width="250" />  
 **Android:**  
-<img src="readme_assets/android_date_picker.png" alt="Date Picker on Android" width="250" />
+<img src="https://raw.githubusercontent.com/karseng9898/flutter_adaptive_widgets/main/readme_assets/android_date_picker.png" alt="Date Picker on Android" width="250" />
 
 ---
 
@@ -161,9 +162,9 @@ CupertinoButton.filled(
 
 🎥 **GIF Previews:**  
 **iOS:**  
-<img src="readme_assets/ios_time_picker.png" alt="Time Picker on iOS" width="250" />  
+<img src="https://raw.githubusercontent.com/karseng9898/flutter_adaptive_widgets/main/readme_assets/ios_time_picker.png" alt="Time Picker on iOS" width="250" />  
 **Android:**  
-<img src="readme_assets/android_time_picker.png" alt="Time Picker on Android" width="250" />
+<img src="https://raw.githubusercontent.com/karseng9898/flutter_adaptive_widgets/main/readme_assets/android_time_picker.png" alt="Time Picker on Android" width="250" />
 
 ---
 
