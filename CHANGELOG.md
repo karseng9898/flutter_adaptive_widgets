@@ -1,6 +1,11 @@
 
 ## **Changelog**
 
+### **Version 0.0.24**
+- **Breaking Changes**: The bottom action sheet now uses a `label` (Widget) parameter instead of `text` (String).
+- Updated the UI for the Android bottom action sheet.
+- Added support for title and message in the bottom action sheet.
+
 ### **Version 0.0.23**
 - Added missing **brightness** params.
 

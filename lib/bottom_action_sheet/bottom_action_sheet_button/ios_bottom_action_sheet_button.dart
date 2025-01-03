@@ -5,7 +5,7 @@ class IosBottomActionSheetButton implements AdaptiveBottomActionSheetButton {
   @override
   Widget build(
     BuildContext context, {
-    required String text,
+    required Widget label,
     void Function(BuildContext context)? onPressed,
     required bool isDefaultAction,
     required bool isDestructiveAction,
@@ -21,7 +21,7 @@ class IosBottomActionSheetButton implements AdaptiveBottomActionSheetButton {
       },
       isDefaultAction: isDefaultAction,
       isDestructiveAction: isDestructiveAction,
-      child: Text(text),
+      child: Center(child: label),
     );
   }
 }

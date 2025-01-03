@@ -5,14 +5,14 @@ import 'package:flutter/cupertino.dart';
 export 'bottom_action_sheet_button/adaptive_bottom_action_sheet_button.dart';
 
 class AdaptiveBottomSheetButtonBuilder {
-  final String text;
+  final Widget child;
   final void Function(BuildContext context)? onPressed;
   final bool isDefaultAction;
   final bool isDestructiveAction;
   final bool isCancelAction;
 
   AdaptiveBottomSheetButtonBuilder({
-    required this.text,
+    required this.child,
     this.onPressed,
     this.isDefaultAction = false,
     this.isDestructiveAction = false,
@@ -40,5 +40,7 @@ abstract class AdaptiveBottomActionSheet {
 
     /// only for iOS
     Brightness? brightness,
+    Widget? title,
+    Widget? message,
   });
 }
