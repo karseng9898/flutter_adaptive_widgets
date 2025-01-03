@@ -16,7 +16,7 @@ abstract class AdaptiveBottomActionSheetButton {
 
   Widget build(
     BuildContext context, {
-    required String text,
+    required Widget label,
     void Function(BuildContext context)? onPressed,
     required bool isDefaultAction,
     required bool isDestructiveAction,

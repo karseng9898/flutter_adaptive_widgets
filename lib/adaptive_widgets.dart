@@ -41,6 +41,8 @@ class AdaptiveWidgets {
 
     /// only for iOS
     Brightness? brightness,
+    Widget? title,
+    Widget? message,
   }) {
     return AdaptiveBottomActionSheet(Theme.of(context).platform).show<T>(
       context,
@@ -48,6 +50,8 @@ class AdaptiveWidgets {
       dismissible: dismissible,
       useRootNavigator: useRootNavigator,
       brightness: brightness,
+      title: title,
+      message: message,
     );
   }
 

@@ -12,6 +12,8 @@ class IosBottomActionSheet implements AdaptiveBottomActionSheet {
     bool dismissible = true,
     bool useRootNavigator = false,
     Brightness? brightness,
+    Widget? title,
+    Widget? message,
   }) {
     return showCupertinoModalPopup<T>(
       context: context,
@@ -26,7 +28,7 @@ class IosBottomActionSheet implements AdaptiveBottomActionSheet {
         if (cancelButtonBuilder != null) {
           cancelButton = AdaptiveBottomActionSheetButton(Theme.of(context).platform).build(
             context,
-            text: cancelButtonBuilder.text,
+            label: cancelButtonBuilder.child,
             onPressed: cancelButtonBuilder.onPressed,
             isDefaultAction: cancelButtonBuilder.isDefaultAction,
             isDestructiveAction: cancelButtonBuilder.isDestructiveAction,
@@ -39,13 +41,15 @@ class IosBottomActionSheet implements AdaptiveBottomActionSheet {
         return CupertinoTheme(
           data: CupertinoThemeData(brightness: brightness),
           child: CupertinoActionSheet(
+            title: title,
+            message: message,
             actions: List.generate(
               items.length,
               (index) {
                 final item = items.elementAt(index);
                 return AdaptiveBottomActionSheetButton(Theme.of(context).platform).build(
                   context,
-                  text: item.text,
+                  label: item.child,
                   onPressed: item.onPressed,
                   isDefaultAction: item.isDefaultAction,
                   isDestructiveAction: item.isDestructiveAction,
