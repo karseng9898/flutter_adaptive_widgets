@@ -78,6 +78,7 @@ class AdaptiveRefreshableScrollView extends StatelessWidget {
   Widget build(BuildContext context) {
     return AdaptiveRefreshableScrollViewFactory(Theme.of(context).platform).build(
       context,
+      key: key,
       controller: controller,
       slivers: slivers,
       onRefresh: onRefresh,

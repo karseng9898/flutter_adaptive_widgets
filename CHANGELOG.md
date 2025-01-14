@@ -1,6 +1,9 @@
 
 ## **Changelog**
 
+### **Version 0.1.3**
+- Added `key` support for refreshable scroll view.
+
 ### **Version 0.1.2**
 - Update README
 
