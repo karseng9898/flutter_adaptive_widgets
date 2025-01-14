@@ -27,8 +27,7 @@ With `adaptive_widgets_flutter`, you can build beautiful, functional, and adapti
 Effortlessly create a scrollable view with pull-to-refresh functionality.
 
 ```dart
-AdaptiveWidgets.buildRefreshableScrollView(
-  context,
+AdaptiveRefreshableScrollView(
   padding: const EdgeInsets.all(20),
   onRefresh: () async {
     await Future.delayed(const Duration(seconds: 2));

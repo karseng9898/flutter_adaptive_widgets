@@ -1,7 +1,9 @@
 
 ## **Changelog**
 
-### **Version 0.1.1**
+### **Version 0.1.2**
+- Update README
+
 ### **Version 0.1.1**
 - Refactored `AdaptiveRefreshableScrollView` to improve code structure and maintainability.
 - **Deprecated**: `buildRefreshableScrollView` method. Use `AdaptiveRefreshableScrollView` instead.
