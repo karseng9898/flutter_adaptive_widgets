@@ -49,7 +49,9 @@ class AndroidBottomActionSheet implements AdaptiveBottomActionSheet {
                   separatorBuilder: (_, __) => const SizedBox(height: 8),
                   itemBuilder: (context, index) {
                     final item = items[index];
-                    return AdaptiveBottomActionSheetButton(Theme.of(context).platform).build(
+                    return AdaptiveBottomActionSheetButton(
+                            Theme.of(context).platform)
+                        .build(
                       context,
                       label: item.child,
                       onPressed: item.onPressed,

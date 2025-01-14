@@ -1,7 +1,7 @@
 import 'package:adaptive_widgets_flutter/refreshable_scroll_view/adaptive_refreshable_scroll_view.dart';
 import 'package:flutter/cupertino.dart';
 
-class IOSRefreshableScrollView implements AdaptiveRefreshableScrollView {
+class IOSRefreshableScrollView implements AdaptiveRefreshableScrollViewFactory {
   @override
   Widget build(
     BuildContext context, {

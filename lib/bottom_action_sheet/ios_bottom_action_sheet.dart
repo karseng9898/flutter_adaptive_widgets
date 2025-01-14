@@ -26,7 +26,8 @@ class IosBottomActionSheet implements AdaptiveBottomActionSheet {
 
         Widget? cancelButton;
         if (cancelButtonBuilder != null) {
-          cancelButton = AdaptiveBottomActionSheetButton(Theme.of(context).platform).build(
+          cancelButton =
+              AdaptiveBottomActionSheetButton(Theme.of(context).platform).build(
             context,
             label: cancelButtonBuilder.child,
             onPressed: cancelButtonBuilder.onPressed,
@@ -47,7 +48,9 @@ class IosBottomActionSheet implements AdaptiveBottomActionSheet {
               items.length,
               (index) {
                 final item = items.elementAt(index);
-                return AdaptiveBottomActionSheetButton(Theme.of(context).platform).build(
+                return AdaptiveBottomActionSheetButton(
+                        Theme.of(context).platform)
+                    .build(
                   context,
                   label: item.child,
                   onPressed: item.onPressed,

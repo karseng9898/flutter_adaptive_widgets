@@ -1,6 +1,11 @@
 
 ## **Changelog**
 
+### **Version 0.1.1**
+### **Version 0.1.1**
+- Refactored `AdaptiveRefreshableScrollView` to improve code structure and maintainability.
+- **Deprecated**: `buildRefreshableScrollView` method. Use `AdaptiveRefreshableScrollView` instead.
+
 ### **Version 0.0.26**
 - Fixed an issue where images were not displaying correctly on the pub.dev README.
 - Updated image links in the README to use publicly hosted URLs from GitHub.
