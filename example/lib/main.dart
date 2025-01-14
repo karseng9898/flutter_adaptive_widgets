@@ -29,8 +29,7 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Adaptive Widgets'),
       ),
-      body: AdaptiveWidgets.buildRefreshableScrollView(
-        context,
+      body: AdaptiveRefreshableScrollView(
         padding: const EdgeInsets.all(20),
         onRefresh: () async {
           await Future.delayed(const Duration(seconds: 2));
@@ -81,7 +80,8 @@ class Home extends StatelessWidget {
                 final actionButtons = [
                   AdaptiveBottomSheetButtonBuilder(
                     child: const Text('Action 1'),
-                    onPressed: (context) => Navigator.of(context).pop('action 1'),
+                    onPressed: (context) =>
+                        Navigator.of(context).pop('action 1'),
                   ),
                   AdaptiveBottomSheetButtonBuilder(
                       child: Row(
@@ -92,8 +92,10 @@ class Home extends StatelessWidget {
                       const Text('Share'),
                     ],
                   )),
-                  AdaptiveBottomSheetButtonBuilder(child: const Text('Cancel'), isCancelAction: true),
-                  AdaptiveBottomSheetButtonBuilder(child: const Text('Action 3')),
+                  AdaptiveBottomSheetButtonBuilder(
+                      child: const Text('Cancel'), isCancelAction: true),
+                  AdaptiveBottomSheetButtonBuilder(
+                      child: const Text('Action 3')),
                 ];
 
                 final result = await AdaptiveWidgets.showBottomActionSheet(

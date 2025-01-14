@@ -56,6 +56,8 @@ class AdaptiveWidgets {
   }
 
   /// Constructs a platform-specific refreshable scroll view.
+  ///
+  /// **Deprecated**: Use `AdaptiveRefreshableScrollView` instead.
   static Widget buildRefreshableScrollView(
     BuildContext context, {
     Key? key,
@@ -77,7 +79,7 @@ class AdaptiveWidgets {
     Color? refreshIndicatorBackgroundColor,
     EdgeInsets padding = EdgeInsets.zero,
   }) {
-    return AdaptiveRefreshableScrollView(Theme.of(context).platform).build(
+    return AdaptiveRefreshableScrollViewFactory(Theme.of(context).platform).build(
       context,
       key: key,
       header: header,

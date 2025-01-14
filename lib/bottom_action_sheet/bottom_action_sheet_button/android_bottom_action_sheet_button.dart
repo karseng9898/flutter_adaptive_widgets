@@ -1,7 +1,8 @@
 import 'adaptive_bottom_action_sheet_button.dart';
 import 'package:flutter/material.dart';
 
-class AndroidBottomActionSheetButton implements AdaptiveBottomActionSheetButton {
+class AndroidBottomActionSheetButton
+    implements AdaptiveBottomActionSheetButton {
   @override
   Widget build(
     BuildContext context, {
