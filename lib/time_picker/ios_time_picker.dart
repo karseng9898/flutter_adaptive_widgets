@@ -10,6 +10,7 @@ class IOSTimePicker implements AdaptiveTimePicker {
     Brightness? brightness,
     bool dismissible = true,
     bool useRootNavigator = false,
+    bool alwaysUse24HourFormat = true,
   }) async {
     _selectedDate = initialTime;
     return await showCupertinoModalPopup<DateTime>(

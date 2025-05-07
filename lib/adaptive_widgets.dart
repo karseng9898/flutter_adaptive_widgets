@@ -138,11 +138,15 @@ class AdaptiveWidgets {
 
     /// only for iOS
     Brightness? brightness,
+
+    /// only for Android, as iOS always uses 12-hour format
+    bool alwaysUse24HourFormat = true,
   }) {
     return AdaptiveTimePicker(Theme.of(context).platform).show(
       context,
       initialTime: initialTime ?? DateTime.now(),
       brightness: brightness,
+      alwaysUse24HourFormat: alwaysUse24HourFormat,
     );
   }
 }
