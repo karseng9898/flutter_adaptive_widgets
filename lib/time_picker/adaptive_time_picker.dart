@@ -21,5 +21,6 @@ abstract class AdaptiveTimePicker {
     Brightness? brightness,
     bool dismissible = true,
     bool useRootNavigator = false,
+    bool alwaysUse24HourFormat = true,
   });
 }

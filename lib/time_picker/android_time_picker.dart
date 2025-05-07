@@ -9,12 +9,19 @@ class AndroidTimePicker implements AdaptiveTimePicker {
     Brightness? brightness,
     bool dismissible = true,
     bool useRootNavigator = false,
+    bool alwaysUse24HourFormat = true,
   }) async {
     final result = await showTimePicker(
       context: context,
       barrierDismissible: dismissible,
       useRootNavigator: useRootNavigator,
       initialTime: TimeOfDay.fromDateTime(initialTime),
+      builder: (context, child) {
+        return MediaQuery(
+          data: MediaQuery.of(context).copyWith(alwaysUse24HourFormat: alwaysUse24HourFormat),
+          child: child!,
+        );
+      },
     );
     if (result == null) return null;
 
