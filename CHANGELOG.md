@@ -1,6 +1,9 @@
 
 ## **Changelog**
 
+### **Version 0.1.4**
+- Added 12-hour format support for the Android time picker.
+
 ### **Version 0.1.3**
 - Added `key` support for refreshable scroll view.
 
