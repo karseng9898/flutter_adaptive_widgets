@@ -1,6 +1,9 @@
 
 ## **Changelog**
 
+### **Version 0.1.5**
+- Update RefreshableScrollView default `refreshControlBackgroundColor` to `Colors.transparent`
+
 ### **Version 0.1.4**
 - Added 12-hour format support for the Android time picker.
 

@@ -1,5 +1,6 @@
 import 'package:adaptive_widgets_flutter/refreshable_scroll_view/adaptive_refreshable_scroll_view.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class IOSRefreshableScrollView implements AdaptiveRefreshableScrollViewFactory {
   @override
@@ -39,7 +40,7 @@ class IOSRefreshableScrollView implements AdaptiveRefreshableScrollViewFactory {
             onRefresh: onRefresh,
             builder: (context, refreshState, pulledExtent, refreshTriggerPullDistance, refreshIndicatorExtent) {
               return ColoredBox(
-                color: refreshControlBackgroundColor ?? CupertinoColors.systemBackground.resolveFrom(context),
+                color: refreshControlBackgroundColor ?? Colors.transparent,
                 child: CupertinoSliverRefreshControl.buildRefreshIndicator(
                   context,
                   refreshState,
