@@ -47,6 +47,7 @@ class AndroidRefreshableScrollView implements AdaptiveRefreshableScrollViewFacto
         onRefresh: onRefresh,
         color: color,
         backgroundColor: refreshIndicatorBackgroundColor,
+        displacement: MediaQuery.of(context).padding.top + 20,
         child: scrollView,
       );
     }

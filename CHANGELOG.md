@@ -1,6 +1,9 @@
 
 ## **Changelog**
 
+### **Version 0.1.6**
+- Added SafeArea support for the refresh indicator in `AdaptiveRefreshableScrollView` to ensure the indicator respects device safe areas (e.g., notch, status bar) and does not overlap system UI.
+
 ### **Version 0.1.5**
 - Update RefreshableScrollView default `refreshControlBackgroundColor` to `Colors.transparent`
 

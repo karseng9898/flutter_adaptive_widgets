@@ -38,15 +38,19 @@ class IOSRefreshableScrollView implements AdaptiveRefreshableScrollViewFactory {
         if (onRefresh != null)
           CupertinoSliverRefreshControl(
             onRefresh: onRefresh,
+            refreshIndicatorExtent: MediaQuery.of(context).padding.top + 60,
+            refreshTriggerPullDistance: MediaQuery.of(context).padding.top + 100,
             builder: (context, refreshState, pulledExtent, refreshTriggerPullDistance, refreshIndicatorExtent) {
-              return ColoredBox(
-                color: refreshControlBackgroundColor ?? Colors.transparent,
-                child: CupertinoSliverRefreshControl.buildRefreshIndicator(
-                  context,
-                  refreshState,
-                  pulledExtent,
-                  refreshTriggerPullDistance,
-                  refreshIndicatorExtent,
+              return SafeArea(
+                child: ColoredBox(
+                  color: refreshControlBackgroundColor ?? Colors.transparent,
+                  child: CupertinoSliverRefreshControl.buildRefreshIndicator(
+                    context,
+                    refreshState,
+                    pulledExtent,
+                    refreshTriggerPullDistance,
+                    refreshIndicatorExtent,
+                  ),
                 ),
               );
             },

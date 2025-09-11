@@ -80,8 +80,7 @@ class Home extends StatelessWidget {
                 final actionButtons = [
                   AdaptiveBottomSheetButtonBuilder(
                     child: const Text('Action 1'),
-                    onPressed: (context) =>
-                        Navigator.of(context).pop('action 1'),
+                    onPressed: (context) => Navigator.of(context).pop('action 1'),
                   ),
                   AdaptiveBottomSheetButtonBuilder(
                       child: Row(
@@ -92,10 +91,8 @@ class Home extends StatelessWidget {
                       const Text('Share'),
                     ],
                   )),
-                  AdaptiveBottomSheetButtonBuilder(
-                      child: const Text('Cancel'), isCancelAction: true),
-                  AdaptiveBottomSheetButtonBuilder(
-                      child: const Text('Action 3')),
+                  AdaptiveBottomSheetButtonBuilder(child: const Text('Cancel'), isCancelAction: true),
+                  AdaptiveBottomSheetButtonBuilder(child: const Text('Action 3')),
                 ];
 
                 final result = await AdaptiveWidgets.showBottomActionSheet(
