@@ -1,7 +1,19 @@
 name: adaptive_widgets_flutter
-description: "A Flutter package for supporting adaptive widgets for iOS and Android platform."
-version: 0.1.6
-homepage: https://github.com/karseng9898/flutter_adaptive_widgets.git
+description: "Adaptive Flutter widgets for dialogs, bottom sheets, pickers, and refresh controls on iOS and Android."
+version: 0.1.8
+homepage: https://github.com/karseng9898/flutter_adaptive_widgets
+repository: https://github.com/karseng9898/flutter_adaptive_widgets
+issue_tracker: https://github.com/karseng9898/flutter_adaptive_widgets/issues
+topics:
+  - adaptive-ui
+  - cupertino
+  - material-design
+  - flutter-widgets
+screenshots:
+  - description: Material-styled adaptive bottom action sheet on Android.
+    path: readme_assets/android_action_sheet.png
+  - description: Cupertino-styled adaptive bottom action sheet on iOS.
+    path: readme_assets/ios_action_sheet.png
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -16,4 +28,3 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
-

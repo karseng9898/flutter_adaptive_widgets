@@ -1,4 +1,4 @@
-import 'package:adaptive_widgets_flutter/time_picker/adaptive_time_picker.dart';
+import 'package:adaptive_widgets_flutter/src/time_picker/adaptive_time_picker.dart';
 import 'package:flutter/material.dart';
 
 class AndroidTimePicker implements AdaptiveTimePicker {
@@ -18,7 +18,8 @@ class AndroidTimePicker implements AdaptiveTimePicker {
       initialTime: TimeOfDay.fromDateTime(initialTime),
       builder: (context, child) {
         return MediaQuery(
-          data: MediaQuery.of(context).copyWith(alwaysUse24HourFormat: alwaysUse24HourFormat),
+          data: MediaQuery.of(context)
+              .copyWith(alwaysUse24HourFormat: alwaysUse24HourFormat),
           child: child!,
         );
       },

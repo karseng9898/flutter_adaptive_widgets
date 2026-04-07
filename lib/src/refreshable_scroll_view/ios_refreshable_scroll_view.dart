@@ -1,4 +1,4 @@
-import 'package:adaptive_widgets_flutter/refreshable_scroll_view/adaptive_refreshable_scroll_view.dart';
+import 'package:adaptive_widgets_flutter/src/refreshable_scroll_view/adaptive_refreshable_scroll_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -39,8 +39,10 @@ class IOSRefreshableScrollView implements AdaptiveRefreshableScrollViewFactory {
           CupertinoSliverRefreshControl(
             onRefresh: onRefresh,
             refreshIndicatorExtent: MediaQuery.of(context).padding.top + 60,
-            refreshTriggerPullDistance: MediaQuery.of(context).padding.top + 100,
-            builder: (context, refreshState, pulledExtent, refreshTriggerPullDistance, refreshIndicatorExtent) {
+            refreshTriggerPullDistance:
+                MediaQuery.of(context).padding.top + 100,
+            builder: (context, refreshState, pulledExtent,
+                refreshTriggerPullDistance, refreshIndicatorExtent) {
               return SafeArea(
                 child: ColoredBox(
                   color: refreshControlBackgroundColor ?? Colors.transparent,

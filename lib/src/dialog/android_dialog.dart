@@ -1,4 +1,4 @@
-import 'package:adaptive_widgets_flutter/dialog/adaptive_dialog.dart';
+import 'package:adaptive_widgets_flutter/src/dialog/adaptive_dialog.dart';
 import 'package:flutter/material.dart';
 
 class AndroidDialog implements AdaptiveDialog {

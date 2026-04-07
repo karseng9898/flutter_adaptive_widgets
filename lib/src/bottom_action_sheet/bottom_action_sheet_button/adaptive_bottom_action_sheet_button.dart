@@ -2,6 +2,7 @@ import 'android_bottom_action_sheet_button.dart';
 import 'ios_bottom_action_sheet_button.dart';
 import 'package:flutter/widgets.dart';
 
+/// Builds a platform-specific action widget for an adaptive bottom action sheet.
 abstract class AdaptiveBottomActionSheetButton {
   factory AdaptiveBottomActionSheetButton(TargetPlatform platform) {
     switch (platform) {
@@ -14,6 +15,7 @@ abstract class AdaptiveBottomActionSheetButton {
     }
   }
 
+  /// Builds a tappable action widget.
   Widget build(
     BuildContext context, {
     required Widget label,

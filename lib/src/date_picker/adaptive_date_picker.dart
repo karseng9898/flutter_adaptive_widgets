@@ -1,7 +1,8 @@
-import 'package:adaptive_widgets_flutter/date_picker/android_date_picker.dart';
-import 'package:adaptive_widgets_flutter/date_picker/ios_date_picker.dart';
+import 'package:adaptive_widgets_flutter/src/date_picker/android_date_picker.dart';
+import 'package:adaptive_widgets_flutter/src/date_picker/ios_date_picker.dart';
 import 'package:flutter/cupertino.dart';
 
+/// Shows a platform-specific date picker.
 abstract class AdaptiveDatePicker {
   factory AdaptiveDatePicker(TargetPlatform platform) {
     switch (platform) {
@@ -14,6 +15,7 @@ abstract class AdaptiveDatePicker {
     }
   }
 
+  /// Presents the picker and resolves with the selected date.
   Future<DateTime?> show(
     BuildContext context, {
     required DateTime minimumDate,
