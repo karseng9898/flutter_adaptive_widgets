@@ -1,6 +1,6 @@
 name: adaptive_widgets_flutter
 description: "Adaptive Flutter widgets for dialogs, bottom sheets, pickers, and refresh controls on iOS and Android."
-version: 0.1.8
+version: 0.1.9
 homepage: https://github.com/karseng9898/flutter_adaptive_widgets
 repository: https://github.com/karseng9898/flutter_adaptive_widgets
 issue_tracker: https://github.com/karseng9898/flutter_adaptive_widgets/issues

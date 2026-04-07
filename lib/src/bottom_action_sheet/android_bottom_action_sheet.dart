@@ -17,9 +17,7 @@ class AndroidBottomActionSheet implements AdaptiveBottomActionSheet {
     final cancelAction = actionButtons.firstWhereOrNull(
       (action) => action.isCancelAction,
     );
-    final primaryActions = actionButtons
-        .where((action) => !action.isCancelAction)
-        .toList(growable: false);
+    final primaryActions = actionButtons.where((action) => !action.isCancelAction).toList(growable: false);
 
     return showModalBottomSheet<T>(
       context: context,
@@ -147,8 +145,7 @@ extension _WidgetFactories on AndroidBottomActionSheet {
                 child: title,
               ),
             ),
-          if (title != null && message != null)
-            const SizedBox(height: _Styles.headerSpacing),
+          if (title != null && message != null) const SizedBox(height: _Styles.headerSpacing),
           if (message != null)
             SizedBox(
               width: double.infinity,
@@ -190,18 +187,15 @@ abstract class _Styles {
     Radius.circular(28),
   );
   static const EdgeInsets headerPadding = EdgeInsets.fromLTRB(16, 16, 16, 8);
-  static const EdgeInsets cancelActionPadding =
-      EdgeInsets.fromLTRB(16, 0, 16, 16);
+  static const EdgeInsets cancelActionPadding = EdgeInsets.fromLTRB(16, 0, 16, 16);
   static const double floatingSheetMargin = 12;
 
   static EdgeInsets getSheetMargin(BuildContext context) {
-    final mediaQuery = MediaQuery.of(context);
-
     return EdgeInsets.fromLTRB(
       floatingSheetMargin,
       floatingSheetMargin,
       floatingSheetMargin,
-      floatingSheetMargin + mediaQuery.padding.bottom,
+      floatingSheetMargin,
     );
   }
 
@@ -244,10 +238,7 @@ abstract class _Styles {
   }
 
   static Color getDragHandleColor(BuildContext context) {
-    return Theme.of(context)
-        .colorScheme
-        .onSurfaceVariant
-        .withValues(alpha: 0.4);
+    return Theme.of(context).colorScheme.onSurfaceVariant.withValues(alpha: 0.4);
   }
 
   static TextStyle getTitleStyle(BuildContext context) {

@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.1.9
+- Refined the Android bottom action sheet floating spacing so the sheet keeps its floating presentation while dismissing correctly when tapping outside.
+
 ## 0.1.8
 - Refined the Android bottom action sheet with a floating container, fully rounded corners, and a centered header layout.
 - Improved the Android bottom action sheet dismissal behavior when tapping outside the sheet.
