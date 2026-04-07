@@ -1,4 +1,4 @@
-import 'package:adaptive_widgets_flutter/adaptive_widgets.dart';
+import 'package:adaptive_widgets_flutter/adaptive_widgets_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,12 +9,15 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Adaptive Widgets',
-      home: Home(),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        useMaterial3: true,
+      ),
+      home: const Home(),
     );
   }
 }
@@ -79,27 +82,38 @@ class Home extends StatelessWidget {
               onPressed: () async {
                 final actionButtons = [
                   AdaptiveBottomSheetButtonBuilder(
-                    child: const Text('Action 1'),
-                    onPressed: (context) => Navigator.of(context).pop('action 1'),
+                    child: const Text('Edit'),
+                    isDefaultAction: true,
+                    onPressed: (context) => Navigator.of(context).pop('edit'),
                   ),
                   AdaptiveBottomSheetButtonBuilder(
-                      child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(Icons.adaptive.share),
-                      const SizedBox(width: 10),
-                      const Text('Share'),
-                    ],
-                  )),
-                  AdaptiveBottomSheetButtonBuilder(child: const Text('Cancel'), isCancelAction: true),
-                  AdaptiveBottomSheetButtonBuilder(child: const Text('Action 3')),
+                    child: const Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(Icons.share_outlined),
+                        SizedBox(width: 10),
+                        Text('Share'),
+                      ],
+                    ),
+                    onPressed: (context) => Navigator.of(context).pop('share'),
+                  ),
+                  AdaptiveBottomSheetButtonBuilder(
+                    child: const Text('Delete'),
+                    isDestructiveAction: true,
+                    onPressed: (context) => Navigator.of(context).pop('delete'),
+                  ),
+                  AdaptiveBottomSheetButtonBuilder(
+                    child: const Text('Cancel'),
+                    isCancelAction: true,
+                    onPressed: (context) => Navigator.of(context).pop('cancel'),
+                  ),
                 ];
 
                 final result = await AdaptiveWidgets.showBottomActionSheet(
                   context,
                   actionButtons: actionButtons,
-                  title: const Text('Sample Title'),
-                  message: const Text('Sample Message'),
+                  title: const Text('Choose an action'),
+                  message: const Text('Pick the next step for this item.'),
                 );
                 debugPrint(result);
               },

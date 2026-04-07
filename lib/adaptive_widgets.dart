@@ -1,16 +1,18 @@
-import 'package:adaptive_widgets_flutter/bottom_action_sheet/adaptive_bottom_action_sheet.dart';
-import 'package:adaptive_widgets_flutter/date_picker/adaptive_date_picker.dart';
-import 'package:adaptive_widgets_flutter/dialog/adaptive_dialog.dart';
-import 'package:adaptive_widgets_flutter/refreshable_scroll_view/adaptive_refreshable_scroll_view.dart';
-import 'package:adaptive_widgets_flutter/time_picker/adaptive_time_picker.dart';
+import 'package:adaptive_widgets_flutter/src/bottom_action_sheet/adaptive_bottom_action_sheet.dart';
+import 'package:adaptive_widgets_flutter/src/date_picker/adaptive_date_picker.dart';
+import 'package:adaptive_widgets_flutter/src/dialog/adaptive_dialog.dart';
+import 'package:adaptive_widgets_flutter/src/refreshable_scroll_view/adaptive_refreshable_scroll_view.dart';
+import 'package:adaptive_widgets_flutter/src/time_picker/adaptive_time_picker.dart';
 import 'package:flutter/material.dart';
 
-export 'bottom_action_sheet/adaptive_bottom_action_sheet.dart';
-export 'date_picker/adaptive_date_picker.dart';
-export 'dialog/adaptive_dialog.dart';
-export 'refreshable_scroll_view/adaptive_refreshable_scroll_view.dart';
+export 'src/bottom_action_sheet/adaptive_bottom_action_sheet.dart';
+export 'src/date_picker/adaptive_date_picker.dart';
+export 'src/dialog/adaptive_dialog.dart';
+export 'src/refreshable_scroll_view/adaptive_refreshable_scroll_view.dart';
 
+/// Entry point for the package's platform-adaptive dialogs, sheets, and pickers.
 class AdaptiveWidgets {
+  /// Shows an adaptive alert dialog for the current platform.
   static Future<T?> showDialog<T>(
     BuildContext context, {
     String? title,
@@ -33,6 +35,7 @@ class AdaptiveWidgets {
     );
   }
 
+  /// Shows an adaptive bottom action sheet for the current platform.
   static Future<T?> showBottomActionSheet<T>(
     BuildContext context, {
     required List<AdaptiveBottomSheetButtonBuilder> actionButtons,
@@ -79,7 +82,8 @@ class AdaptiveWidgets {
     Color? refreshIndicatorBackgroundColor,
     EdgeInsets padding = EdgeInsets.zero,
   }) {
-    return AdaptiveRefreshableScrollViewFactory(Theme.of(context).platform).build(
+    return AdaptiveRefreshableScrollViewFactory(Theme.of(context).platform)
+        .build(
       context,
       key: key,
       header: header,
@@ -97,6 +101,7 @@ class AdaptiveWidgets {
     );
   }
 
+  /// Shows an adaptive date picker and keeps the initial value within range.
   static Future<DateTime?> showDatePicker(
     BuildContext context, {
     DateTime? minimumDate,
@@ -127,9 +132,12 @@ class AdaptiveWidgets {
       maximumDate: maxDate,
       initialDate: initDate,
       brightness: brightness,
+      dismissible: dismissible,
+      useRootNavigator: useRootNavigator,
     );
   }
 
+  /// Shows an adaptive time picker for the current platform.
   static Future<DateTime?> showTimePicker(
     BuildContext context, {
     DateTime? initialTime,
@@ -146,6 +154,8 @@ class AdaptiveWidgets {
       context,
       initialTime: initialTime ?? DateTime.now(),
       brightness: brightness,
+      dismissible: dismissible,
+      useRootNavigator: useRootNavigator,
       alwaysUse24HourFormat: alwaysUse24HourFormat,
     );
   }
